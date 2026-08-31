@@ -6,7 +6,7 @@ import PeakDivider from './PeakDivider';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative bg-navy pt-20">
+    <section id="home" className="relative bg-navy pt-24">
       <div className="relative overflow-hidden blueprint-grid">
         {/* watermark mark */}
         <Image

@@ -32,9 +32,14 @@ export default function Navbar() {
         scrolled ? 'bg-navy/95 backdrop-blur shadow-lg shadow-black/10' : 'bg-navy/80 backdrop-blur-sm'
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between h-20">
+      <nav className="mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between h-24">
         <a href="#home" className="flex items-center gap-3 shrink-0">
-          <Image src={logo} alt="Trio Built Gulf Technical Services LLC" className="h-14 w-auto" />
+          <Image
+            src={logo}
+            alt="Trio Built Gulf Technical Services LLC"
+            priority
+            className="h-16 sm:h-20 w-auto"
+          />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8 font-body text-[0.92rem] text-cream/90">

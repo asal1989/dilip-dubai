@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="bg-navy-deep text-cream/70">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src={logo} alt={company.name} className="h-16 w-auto mb-4" />
+          <Image src={logo} alt={company.name} className="h-20 w-auto mb-4" />
           <p className="text-sm leading-relaxed text-cream/55">{company.location}</p>
         </div>
 

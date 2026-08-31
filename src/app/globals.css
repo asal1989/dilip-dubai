@@ -21,8 +21,8 @@
 
 html {
   scroll-behavior: smooth;
-  /* Offset anchor jumps so section headings clear the fixed 80px navbar. */
-  scroll-padding-top: 5rem;
+  /* Offset anchor jumps so section headings clear the fixed navbar. */
+  scroll-padding-top: 6rem;
 }
 
 body {
