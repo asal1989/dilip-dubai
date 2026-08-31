@@ -27,16 +27,16 @@ export const team = [
 export const primaryPhone = team[0].phone;
 export const primaryPhoneHref = team[0].phoneHref;
 
-// Order matches the section order on the page (see page.tsx) so the nav
-// reflects the actual scroll order rather than jumping around.
+// One route per section. Order is the site's information hierarchy and also
+// drives the footer "Quick Links" list.
 export const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Team', href: '#team' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Why Us', href: '/why-us' },
+  { label: 'Team', href: '/team' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 // Service code prefix "SVC" used as a technical-spec-sheet style label —

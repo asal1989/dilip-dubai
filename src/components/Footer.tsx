@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Mail, MapPin, Phone } from '@/icons';
 import logo from '@/assets/logo-on-dark.png';
 import { company, navLinks, services, team } from '@/data/content';
@@ -10,7 +11,9 @@ export default function Footer() {
     <footer className="bg-navy-deep text-cream/70">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Image src={logo} alt={company.name} className="h-20 w-auto mb-4" />
+          <Link href="/" className="inline-block">
+            <Image src={logo} alt={company.name} className="h-20 w-auto mb-4" />
+          </Link>
           <p className="text-sm leading-relaxed text-cream/55">{company.location}</p>
         </div>
 
@@ -19,9 +22,9 @@ export default function Footer() {
           <ul className="flex flex-col gap-2.5">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="text-sm hover:text-teal-bright transition-colors">
+                <Link href={l.href} className="text-sm hover:text-teal-bright transition-colors">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -31,8 +34,13 @@ export default function Footer() {
           <h4 className="eyebrow text-teal-bright mb-4">Services</h4>
           <ul className="flex flex-col gap-2.5">
             {services.slice(0, 6).map((s) => (
-              <li key={s.code} className="text-sm text-cream/55">
-                {s.title}
+              <li key={s.code}>
+                <Link
+                  href="/services"
+                  className="text-sm text-cream/55 hover:text-teal-bright transition-colors"
+                >
+                  {s.title}
+                </Link>
               </li>
             ))}
           </ul>

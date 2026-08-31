@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Mail, MapPin, MessageCircle, Phone, Send } from '@/icons';
 import { company, servicesFormOptions, team } from '@/data/content';
 
@@ -13,17 +14,25 @@ type FormState = {
 };
 
 export default function Contact() {
-  const [form, setForm] = useState<FormState>({ name: '', phone: '', email: '', service: '', message: '' });
-  const [sent, setSent] = useState(false);
+  const searchParams = useSearchParams();
 
-  useEffect(() => {
-    const handler = (e: Event) => {
-      const { detail } = e as CustomEvent<string>;
-      setForm((f) => ({ ...f, service: detail }));
-    };
-    window.addEventListener('prefill-service', handler);
-    return () => window.removeEventListener('prefill-service', handler);
-  }, []);
+  // Seed the "Service Required" select when arriving from a service card
+  // (/contact?service=...), matching a known option where possible. This
+  // component only renders on the client (wrapped in <Suspense>), so the
+  // param is available on first render.
+  const requestedService = searchParams.get('service');
+  const initialService = requestedService
+    ? servicesFormOptions.find((s) => s === requestedService) ?? 'Other'
+    : '';
+
+  const [form, setForm] = useState<FormState>({
+    name: '',
+    phone: '',
+    email: '',
+    service: initialService,
+    message: '',
+  });
+  const [sent, setSent] = useState(false);
 
   const update = (key: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [key]: e.target.value }));

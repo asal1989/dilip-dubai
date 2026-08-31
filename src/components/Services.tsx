@@ -1,9 +1,7 @@
-'use client';
-
+import Link from 'next/link';
 import { ArrowUpRight } from '@/icons';
 import { icons } from '@/icons';
 import { services } from '@/data/content';
-import PeakDivider from './PeakDivider';
 
 export default function Services() {
   return (
@@ -40,26 +38,18 @@ export default function Services() {
                 </h3>
                 <p className="mt-2 text-sm text-cream/60 leading-relaxed">{service.description}</p>
 
-                <a
-                  href={`#contact?service=${encodeURIComponent(service.title)}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const el = document.getElementById('contact');
-                    el?.scrollIntoView({ behavior: 'smooth' });
-                    window.dispatchEvent(new CustomEvent('prefill-service', { detail: service.title }));
-                  }}
+                <Link
+                  href={`/contact?service=${encodeURIComponent(service.title)}`}
                   className="mt-5 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-teal-bright hover:text-cream transition-colors"
                 >
                   Enquire Now
                   <ArrowUpRight size={15} />
-                </a>
+                </Link>
               </div>
             );
           })}
         </div>
       </div>
-
-      <PeakDivider from="#0F294A" to="#F4F2E7" />
     </section>
   );
 }

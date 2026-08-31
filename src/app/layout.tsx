@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { company, primaryPhone } from '@/data/content';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { Phone } from '@/icons';
+import { company, primaryPhone, primaryPhoneHref } from '@/data/content';
 import { siteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Trio Built Gulf Technical Services LLC | Technical Services Dubai',
+  title: {
+    default: 'Trio Built Gulf Technical Services LLC | Technical Services Dubai',
+    template: '%s | Trio Built Gulf Technical Services LLC',
+  },
   description:
     'Trio Built Gulf Technical Services LLC provides professional technical, maintenance, MEP, electrical, plumbing, HVAC, flooring and interior services in Dubai, UAE.',
   icons: {
@@ -52,7 +58,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
-        {children}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+
+        {/* Mobile sticky call button for fast contact on small screens */}
+        <a
+          href={primaryPhoneHref}
+          className="lg:hidden fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-teal text-cream shadow-lg shadow-black/30"
+          aria-label="Call Trio Built Gulf"
+        >
+          <Phone size={22} />
+        </a>
       </body>
     </html>
   );

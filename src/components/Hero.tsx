@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight, Phone } from '@/icons';
 import logoMark from '@/assets/logo-mark.png';
 import { primaryPhone, primaryPhoneHref } from '@/data/content';
@@ -39,13 +40,13 @@ export default function Hero() {
               className="mt-10 flex flex-wrap items-center gap-4 animate-[fadeUp_0.7s_ease_forwards] opacity-0"
               style={{ animationDelay: '0.4s' }}
             >
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="group inline-flex items-center gap-2 rounded-sm bg-teal px-7 py-3.5 font-display text-sm font-semibold tracking-wide text-cream hover:bg-teal-bright transition-colors"
               >
                 GET A FREE QUOTE
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
               <a
                 href={primaryPhoneHref}
                 className="inline-flex items-center gap-2 rounded-sm border border-cream/25 px-7 py-3.5 font-display text-sm font-semibold tracking-wide text-cream hover:border-teal-bright hover:text-teal-bright transition-colors"

@@ -1,6 +1,5 @@
 import { Mail, Phone, User } from '@/icons';
 import { company, team } from '@/data/content';
-import PeakDivider from './PeakDivider';
 
 export default function Team() {
   return (
@@ -43,8 +42,6 @@ export default function Team() {
           ))}
         </div>
       </div>
-
-      <PeakDivider from="#0F294A" to="#F4F2E7" />
     </section>
   );
 }
