@@ -145,3 +145,13 @@ export const projectCategories = [
 ] as const;
 
 export const servicesFormOptions = services.map((s) => s.title);
+
+// KPI row shown at the top of the Services page. `value` is intentionally
+// short (a number or token). Items 1–3 are factual; confirm or edit item 4
+// (callout availability) before publishing.
+export const serviceStats = [
+  { value: String(services.length), label: 'Technical service lines', hint: 'Installation, maintenance & finishing' },
+  { value: '3', label: 'Sectors served', hint: 'Residential · Commercial · Industrial' },
+  { value: '1', label: 'Point of contact', hint: 'For every trade on your property' },
+  { value: '24/7', label: 'Callout availability', hint: 'Planned works and urgent response' },
+] as const;

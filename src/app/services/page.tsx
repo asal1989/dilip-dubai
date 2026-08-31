@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PageHeader from '@/components/PageHeader';
+import ServiceStats from '@/components/ServiceStats';
 import Services from '@/components/Services';
 import CtaBand from '@/components/CtaBand';
 
@@ -18,6 +19,7 @@ export default function ServicesPage() {
         subtitle="Eleven installation, maintenance and finishing disciplines, delivered by one partner."
         nextBg="navy"
       />
+      <ServiceStats />
       <Services />
       <CtaBand />
     </>
