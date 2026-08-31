@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from '@/icons';
 import { icons } from '@/icons';
 import { services } from '@/data/content';
+import TiltCard from '@/components/TiltCard';
 
 export default function Services() {
   return (
@@ -19,33 +20,42 @@ export default function Services() {
         </div>
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service) => {
+          {services.map((service, i) => {
             const Icon = icons[service.icon] ?? icons.Wrench;
             return (
-              <div
-                key={service.code}
-                className="group relative rounded-sm border border-cream/10 bg-cream/[0.03] p-6 hover:border-teal-bright/50 hover:bg-cream/[0.06] transition-all duration-300"
-              >
+              <TiltCard key={service.code} index={i} contentClassName="p-6">
                 <div className="flex items-start justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-teal/20 text-teal-bright group-hover:bg-teal-bright group-hover:text-navy transition-colors">
+                  <div
+                    className="flex h-12 w-12 items-center justify-center rounded-sm bg-gradient-to-br from-teal-bright/30 to-teal/10 text-teal-bright ring-1 ring-teal-bright/20 transition-colors duration-300 group-hover:from-teal-bright group-hover:to-teal-bright group-hover:text-navy"
+                    style={{ transform: 'translateZ(34px)' }}
+                  >
                     <Icon size={22} />
                   </div>
-                  <span className="font-mono text-[0.7rem] text-cream/60 pt-1">{service.code}</span>
+                  <span
+                    className="pt-1 font-mono text-[0.7rem] text-cream/55"
+                    style={{ transform: 'translateZ(20px)' }}
+                  >
+                    {service.code}
+                  </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-base font-semibold text-cream leading-snug">
+                <h3
+                  className="mt-5 font-display text-base font-semibold leading-snug text-cream"
+                  style={{ transform: 'translateZ(16px)' }}
+                >
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm text-cream/60 leading-relaxed">{service.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-cream/60">{service.description}</p>
 
                 <Link
                   href={`/contact?service=${encodeURIComponent(service.title)}`}
-                  className="mt-5 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-teal-bright hover:text-cream transition-colors"
+                  className="mt-auto inline-flex items-center gap-1.5 pt-5 font-display text-sm font-semibold text-teal-bright transition-colors hover:text-cream"
+                  style={{ transform: 'translateZ(12px)' }}
                 >
                   Enquire Now
                   <ArrowUpRight size={15} />
                 </Link>
-              </div>
+              </TiltCard>
             );
           })}
         </div>
