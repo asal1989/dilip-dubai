@@ -144,4 +144,4 @@ export const projectCategories = [
   { category: 'MEP', image: null },
 ] as const;
 
-export const services_form_options = services.map((s) => s.title);
+export const servicesFormOptions = services.map((s) => s.title);

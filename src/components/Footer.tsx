@@ -63,7 +63,7 @@ export default function Footer() {
       <div className="border-t border-cream/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-display text-sm font-semibold text-cream/80">
-            TRIO BUILT GULF <span className="text-cream/60 font-normal">TECHNICAL SERVICE LLC</span>
+            TRIO BUILT GULF <span className="text-cream/60 font-normal">TECHNICAL SERVICES LLC</span>
           </p>
           <p className="text-xs text-cream/60 font-mono text-center">
             &copy; {year} Trio Built Gulf Technical Services LLC. All rights reserved.

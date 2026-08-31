@@ -66,13 +66,6 @@ export default function Hero() {
       </div>
 
       <PeakDivider from="#0F294A" to="#F4F2E7" />
-
-      <style>{`
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(14px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </section>
   );
 }

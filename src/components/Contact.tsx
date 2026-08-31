@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Mail, MapPin, MessageCircle, Phone, Send } from '@/icons';
-import { company, services_form_options, team } from '@/data/content';
+import { company, servicesFormOptions, team } from '@/data/content';
 
 type FormState = {
   name: string;
@@ -155,7 +155,7 @@ export default function Contact() {
               <Field label="Service Required">
                 <select name="service" value={form.service} onChange={update('service')} className="field-input">
                   <option value="">Select a service</option>
-                  {services_form_options.map((s) => (
+                  {servicesFormOptions.map((s) => (
                     <option key={s} value={s}>
                       {s}
                     </option>
@@ -192,22 +192,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      <style>{`
-        .field-input {
-          width: 100%;
-          background: rgba(244, 242, 231, 0.05);
-          border: 1px solid rgba(244, 242, 231, 0.15);
-          border-radius: 2px;
-          padding: 0.7rem 0.9rem;
-          color: #F4F2E7;
-          font-family: var(--font-body);
-          font-size: 0.92rem;
-        }
-        .field-input::placeholder { color: rgba(244, 242, 231, 0.35); }
-        .field-input:focus { outline: none; border-color: #3EA893; background: rgba(244, 242, 231, 0.08); }
-        .field-input option { background: #0F294A; }
-      `}</style>
     </section>
   );
 }

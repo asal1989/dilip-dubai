@@ -18,6 +18,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Offset anchor jumps so section headings clear the fixed 80px navbar. */
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -70,4 +72,39 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-size: 0.75rem;
+}
+
+/* Hero intro animation (used by src/components/Hero.tsx). */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quote form fields (used by src/components/Contact.tsx). */
+.field-input {
+  width: 100%;
+  background: rgba(244, 242, 231, 0.05);
+  border: 1px solid rgba(244, 242, 231, 0.15);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+.field-input::placeholder {
+  color: rgba(244, 242, 231, 0.35);
+}
+.field-input:focus {
+  outline: none;
+  border-color: var(--color-teal-bright);
+  background: rgba(244, 242, 231, 0.08);
+}
+.field-input option {
+  background: var(--color-navy);
 }

@@ -1,11 +1,7 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { company } from '@/data/content';
-
-// Set NEXT_PUBLIC_SITE_URL once the real domain is live (see README) — this
-// placeholder only affects how absolute URLs (OG images, canonical link)
-// resolve, not anything user-visible until then.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com';
+import { company, primaryPhone } from '@/data/content';
+import { siteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -14,6 +10,8 @@ export const metadata: Metadata = {
     'Trio Built Gulf Technical Services LLC provides professional technical, maintenance, MEP, electrical, plumbing, HVAC, flooring and interior services in Dubai, UAE.',
   icons: {
     icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   openGraph: {
     type: 'website',
@@ -24,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   themeColor: '#0F294A',
 };
 
@@ -33,6 +31,12 @@ const localBusinessJsonLd = {
   '@type': 'HomeAndConstructionBusiness',
   name: company.name,
   email: company.email,
+  telephone: primaryPhone,
+  url: siteUrl,
+  areaServed: {
+    '@type': 'City',
+    name: 'Dubai',
+  },
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Dubai',
