@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --color-navy: #0F294A;
+  --color-navy-deep: #081A31;
+  --color-teal: #2E8073;
+  --color-teal-bright: #3EA893;
+  --color-cream: #F4F2E7;
+  --color-cream-dim: #E7E3D1;
+  --color-khaki: #CCCFA4;
+  --color-ink: #0A1626;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal-bright);
+  outline-offset: 3px;
+}
+
+/* Signature motif: angular "peak" divider between sections, echoing the
+   triangular mark in the company logo. Used consistently at every major
+   section seam instead of a generic wave/blob. */
+.peak-divider {
+  position: relative;
+  height: 64px;
+  width: 100%;
+}
+.peak-divider svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(244, 242, 231, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 242, 231, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
