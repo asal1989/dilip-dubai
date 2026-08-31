@@ -4,14 +4,17 @@ A Next.js (App Router, TypeScript) + Tailwind CSS v4 port of the Trio Built Gulf
 
 ## What's inside
 
-- `src/app/page.tsx` — page layout (assembles all sections)
-- `src/app/layout.tsx` — root layout, page `<title>`/meta description, OpenGraph tags, theme color and favicon
-- `src/components/` — one file per section (Navbar, Hero, About, Services, WhyChooseUs, Team, Projects, Contact, Footer). `Navbar.tsx` and `Contact.tsx` are client components (`'use client'`) because they use `useState`/`useEffect` and browser events; everything else renders on the server.
+- `src/app/layout.tsx` — root layout: renders `Navbar` + `Footer` + the mobile sticky call button around every page, plus the `<title>` template, meta description, OpenGraph tags, theme color, favicon and LocalBusiness JSON-LD.
+- `src/app/page.tsx` — the home page: hero + closing call-to-action band.
+- `src/app/<route>/page.tsx` — one folder per section route (`about`, `services`, `why-us`, `team`, `projects`, `contact`). Each is a thin file: per-page `metadata`, a `<PageHeader>` banner, the matching section component from `src/components/`, and usually a closing `<CtaBand>`.
+- `src/components/` — one file per section (Hero, About, Services, WhyChooseUs, Team, Projects, Contact) plus the shared chrome (Navbar, Footer, PageHeader, CtaBand, PeakDivider). `Navbar.tsx` and `Contact.tsx` are client components (`'use client'`) because they use `useState` / router hooks; everything else renders on the server.
+- `src/data/content.ts` — the `navLinks` array defines the routes and their order (and drives the footer "Quick Links").
 - `src/data/content.ts` — **all editable text lives here**: company details, phone numbers, the 11 services, team members, "Why Choose Us" cards, and project category placeholders. Edit this file to update copy without touching any component.
 - `src/icons.ts` — explicit registry of every lucide icon the site uses. `Services.tsx` and `WhyChooseUs.tsx` pick icons by name from `content.ts`, so this map is what lets the bundler tree-shake the ~1,800 icons the site doesn't use. **Add an entry here whenever you add a new `icon` field in `content.ts`**, or a new icon silently falls back to the section's default.
 - `src/assets/` — logo (background removed, transparent PNG) and the cropped logo mark used as the hero watermark, both sized for how they're displayed and rendered through `next/image`.
 - `src/assets/source/` — full-resolution originals and the two business card images. Nothing here is imported by the site, so it never enters the build; kept as brand source material for print or future reuse.
-- `src/app/globals.css` — brand colors, fonts, and the angular "peak divider" motif used between sections.
+- `src/app/globals.css` — brand colors, fonts (Fraunces display / Inter body / IBM Plex Mono labels) and the angular "peak divider" motif used at section seams.
+- `src/app/sitemap.ts` — generated from `navLinks`, so adding a route to `content.ts` adds it to the sitemap automatically.
 
 ## Running it locally
 
