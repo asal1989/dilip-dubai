@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Mail, MapPin, Phone } from '@/icons';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo-on-dark.png';
 import { company, navLinks, services, team } from '@/data/content';
 
 export default function Footer() {

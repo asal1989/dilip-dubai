@@ -47,3 +47,5 @@ Colors, typography and the logo were taken directly from the attached logo and b
 - Cream `#F4F2E7`
 
 Do not distort or recolor the logo file (`src/assets/logo.png`) — it's already been background-cleaned and is ready to use as-is. The copies in `src/assets/` are proportionally downscaled to their display size for page-load speed; the untouched 640px originals are in `src/assets/source/` if you need them for print or larger placements.
+
+**Two logo variants**: `logo.png` has the "TRIO BUILT GULF" wordmark in navy — use it on light backgrounds. `logo-on-dark.png` has that same wordmark recolored to cream (the teal triangle and teal "TECHNICAL SERVICES LLC" subtext are untouched) for use on navy backgrounds, where the navy wordmark is otherwise unreadable. `Navbar.tsx` and `Footer.tsx` use `logo-on-dark.png`; reach for `logo.png` if you add the logo anywhere on a light (cream/white) section.

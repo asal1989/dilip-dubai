@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Menu, Phone, X } from '@/icons';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo-on-dark.png';
 import { navLinks, primaryPhone, primaryPhoneHref } from '@/data/content';
 
 export default function Navbar() {
