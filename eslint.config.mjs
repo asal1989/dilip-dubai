@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Standalone tier builds — each has its own toolchain.
+    "sites/**",
   ]),
 ]);
 
