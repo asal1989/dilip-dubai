@@ -85,6 +85,16 @@ h2.font-display {
   background-size: 44px 44px;
 }
 
+/* Opt-in: slowly drifts the blueprint grid (hero only). */
+.blueprint-grid--animated {
+  animation: gridPan 40s linear infinite;
+}
+@keyframes gridPan {
+  to {
+    background-position: 44px 44px;
+  }
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   letter-spacing: 0.18em;
@@ -101,6 +111,59 @@ h2.font-display {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Gentle continuous float for the hero watermark mark. */
+.animate-floaty {
+  animation: floaty 9s ease-in-out infinite;
+}
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-18px);
+  }
+}
+
+/* Scroll-reveal: elements start hidden and ease in when <Reveal> adds
+   .is-visible (see src/components/Reveal.tsx). */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Infinite horizontal ticker (see src/components/ServicesMarquee.tsx). */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Transitions are globally neutralised below, so make sure revealed
+     content is simply shown rather than stuck at opacity 0. */
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
 

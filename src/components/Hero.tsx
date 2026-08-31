@@ -8,13 +8,13 @@ import PeakDivider from './PeakDivider';
 export default function Hero() {
   return (
     <section id="home" className="relative bg-navy pt-24">
-      <div className="relative overflow-hidden blueprint-grid">
+      <div className="relative overflow-hidden blueprint-grid blueprint-grid--animated">
         {/* watermark mark */}
         <Image
           src={logoMark}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute -right-24 top-1/2 -translate-y-1/2 w-[520px] max-w-none opacity-[0.07] sm:opacity-10"
+          className="animate-floaty pointer-events-none select-none absolute -right-24 top-1/2 -translate-y-1/2 w-[520px] max-w-none opacity-[0.07] sm:opacity-10"
         />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 py-24 sm:py-32 lg:py-36">
