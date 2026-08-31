@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1300" viewBox="0 0 1100 1300" role="img" aria-label="ARCHITECTURAL INTERIOR — PLACEHOLDER">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d2947"/>
+      <stop offset="0.55" stop-color="#0a2140"/>
+      <stop offset="1" stop-color="#071b33"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="rgba(28,192,180,0.10)"/>
+    </pattern>
+  </defs>
+  <rect width="1100" height="1300" fill="url(#sky)"/>
+  <rect width="1100" height="1300" fill="url(#grid)"/>
+  <rect x="0" y="806" width="1100" height="494" fill="rgb(20,46,78)"/><rect x="55" y="78" width="990" height="728.0000000000001" fill="rgb(15,38,66)" stroke="rgba(28,192,180,0.4)" stroke-width="1.5"/><line x1="55" y1="78" x2="55" y2="806" stroke="rgba(28,192,180,0.28)"/><line x1="220" y1="78" x2="220" y2="806" stroke="rgba(28,192,180,0.28)"/><line x1="385" y1="78" x2="385" y2="806" stroke="rgba(28,192,180,0.28)"/><line x1="550" y1="78" x2="550" y2="806" stroke="rgba(28,192,180,0.28)"/><line x1="715" y1="78" x2="715" y2="806" stroke="rgba(28,192,180,0.28)"/><line x1="880" y1="78" x2="880" y2="806" stroke="rgba(28,192,180,0.28)"/><line x1="1045" y1="78" x2="1045" y2="806" stroke="rgba(28,192,180,0.28)"/><rect x="88" y="260.39074343803804" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="176" y="467.80413919510465" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="264" y="545.1286544636423" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="352" y="376.521805620323" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="440" y="541.4296209136046" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="528" y="290.35728661543544" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="616" y="537.4801467659074" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="704" y="437.2899680348928" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="792" y="544.5391875045607" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="880" y="464.8334285884266" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="968" y="424.50287024854333" width="55" height="520" fill="rgba(28,192,180,0.10)"/><rect x="154.00000000000003" y="858" width="396" height="208" fill="rgb(28,54,86)" stroke="rgba(28,192,180,0.3)"/><rect x="616.0000000000001" y="884.0000000000001" width="264" height="156" fill="rgb(26,50,82)" stroke="rgba(28,192,180,0.25)"/><circle cx="924" cy="715.0000000000001" r="65" fill="none" stroke="rgba(185,154,91,0.5)"/>
+  <rect x="14" y="14" width="1072" height="1272" fill="none" stroke="rgba(28,192,180,0.45)"/>
+  <text x="26" y="1278" font-family="monospace" font-size="13" letter-spacing="2" fill="rgba(245,242,233,0.6)">ARCHITECTURAL INTERIOR — PLACEHOLDER</text>
+</svg>

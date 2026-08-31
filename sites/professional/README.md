@@ -1,32 +1,42 @@
-# Trio Built Gulf — Professional (₹22,000)
+# Triad Built Group — Professional (redesign)
 
-Everything in **Essential**, plus the SEO, accessibility and QA layer.
+Premium one-page site for **Triad Built Group Technical Services LLC**, Dubai —
+rebuilt from a reference design as a Next.js App Router application.
+
+## Stack
+
+- Next.js 16.3.3 (App Router, Turbopack) · React 19.2.8 · TypeScript 5 (strict)
+- Tailwind CSS v4 (`@tailwindcss/postcss`) + tokens/utilities in `app/globals.css`
+- `lucide-react` via the `lib/icons.ts` registry
+- Google Fonts: Fraunces (display) · Inter (body) · IBM Plex Mono (labels)
+- `next/image` for all imagery
+
+## Run
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build && npm run start
+```
+
+## Structure
 
 ```
-professional/
-  index.html      markup + inline styles + script (skip link, JSON-LD)
-  robots.txt      crawl rules
-  sitemap.xml     single-URL sitemap
-  assets/         logo variants + favicon
+app/            layout (Navbar + Footer + JSON-LD), page (section order), robots, sitemap
+components/     Navbar Hero Stats Services ServiceCard WhyUs Projects ProjectCard
+               About Process CTA Contact Footer  +  Logo Reveal
+data/          site services projects stats whyus process   (typed arrays)
+lib/icons.ts   explicit lucide registry
+public/images/ SVG architectural placeholders — swap for real photos before launch
 ```
 
-## Added over Essential
-
-- **`robots.txt` + `sitemap.xml`** — crawl rules and a sitemap reference
-- **Structured business data** — `HomeAndConstructionBusiness` JSON-LD in the page head
-  (name, address, phone numbers, area served) for Google's business listing
-- **Accessibility** — "Skip to content" link, visible focus rings, and text/background
-  contrast raised to meet WCAG AA on the low-opacity labels
-- **Responsive** — layout verified at phone (375), tablet (768) and desktop (1180+) widths
-- **Load-time pass** — inlined critical CSS, `preconnect` to the font host, `font-display: swap`,
-  explicitly sized images, no render-blocking third-party scripts
-
-## Still email-based
-
-The quote form opens an email draft (same as Essential). A server-connected
-inbox / CRM form is the Premium tier.
+Section order: Navbar → Hero → Stats → Services → Why Us → Projects → About →
+Process → CTA → Contact → Footer.
 
 ## Before launch
 
-Replace `https://example.com` in `index.html`, `robots.txt` and `sitemap.xml` with
-the real domain.
+- Replace every `/public/images/*.svg` placeholder with real photography
+  (jpg/webp). Once none are SVG, delete the `images` block in `next.config.ts`.
+- Set `NEXT_PUBLIC_SITE_URL` to the real domain.
+- The quote form opens a pre-filled email to `info@triadbuiltgroup.ae`
+  (Professional tier = email-based). Wire to an inbox/CRM for the Premium tier.

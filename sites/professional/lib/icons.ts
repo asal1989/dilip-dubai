@@ -1,0 +1,65 @@
+// Central icon registry (the project's icons abstraction). Data files refer
+// to icons by name; components resolve them here. Keeping the set explicit
+// lets the bundler tree-shake the rest of lucide-react.
+import {
+  AppWindow,
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Building2,
+  CheckCircle2,
+  ClipboardList,
+  Droplets,
+  Frame,
+  Grid3x3,
+  Hammer,
+  Handshake,
+  Headphones,
+  Mail,
+  MapPin,
+  Menu,
+  PaintRoller,
+  Phone,
+  SearchCheck,
+  ShieldCheck,
+  Snowflake,
+  ThumbsUp,
+  Users,
+  Wrench,
+  X,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+
+export const icons = {
+  AppWindow,
+  ArrowRight,
+  ArrowUpRight,
+  Award,
+  Building2,
+  CheckCircle2,
+  ClipboardList,
+  Droplets,
+  Frame,
+  Grid3x3,
+  Hammer,
+  Handshake,
+  Headphones,
+  Mail,
+  MapPin,
+  Menu,
+  PaintRoller,
+  Phone,
+  SearchCheck,
+  ShieldCheck,
+  Snowflake,
+  ThumbsUp,
+  Users,
+  Wrench,
+  X,
+  Zap,
+} satisfies Record<string, LucideIcon>;
+
+export type IconName = keyof typeof icons;
+
+export { ArrowRight, ArrowUpRight, Phone, Menu, X } from 'lucide-react';
