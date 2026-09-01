@@ -40,6 +40,12 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(function (el) { io.observe(el); });
+    // Safety net: content must never stay invisible because an observer
+    // callback got delayed or missed in some environment. Anything still
+    // unrevealed after a few seconds is forced visible outright.
+    setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { el.classList.add('in'); });
+    }, 2500);
   }
 
   // Hero parallax on pointer move
@@ -69,6 +75,19 @@
       card.style.transform = 'rotateY(' + (px * 10) + 'deg) rotateX(' + (py * -10) + 'deg)';
     });
     wrap.addEventListener('mouseleave', function () { card.style.transform = 'rotateY(0) rotateX(0)'; });
+  });
+
+  // Magnetic pull on primary buttons — the button nudges toward the
+  // cursor within its own bounds, a small, deliberate touch that reads
+  // as "designed" rather than a stock hover state.
+  document.querySelectorAll('.btn-primary').forEach(function (btn) {
+    btn.addEventListener('mousemove', function (e) {
+      var rect = btn.getBoundingClientRect();
+      var x = e.clientX - rect.left - rect.width / 2;
+      var y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = 'translate(' + (x * 0.18) + 'px, ' + (y * 0.35 - 3) + 'px)';
+    });
+    btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
   });
 
   // Animated counters
