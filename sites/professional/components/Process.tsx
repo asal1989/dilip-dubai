@@ -30,7 +30,7 @@ export default function Process() {
                 <span className="grid h-14 w-14 place-items-center rounded-full border border-teal/40 bg-off text-teal">
                   <Icon size={22} strokeWidth={1.5} />
                 </span>
-                <span className="mt-5 font-mono text-xs font-medium tracking-[0.2em] text-teal">
+                <span className="mt-5 font-mono text-xs font-medium tracking-[0.07em] text-teal">
                   {step.number}
                 </span>
                 <h3 className="mt-1 font-sans text-base font-semibold text-navy">{step.title}</h3>

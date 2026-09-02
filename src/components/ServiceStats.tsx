@@ -90,7 +90,7 @@ export default function ServiceStats() {
               <span className="mt-1 block text-xs leading-relaxed text-cream/55">{stat.hint}</span>
               <span
                 aria-hidden
-                className="pointer-events-none absolute right-5 top-5 font-mono text-[0.62rem] tracking-[0.25em] text-teal-bright/70"
+                className="pointer-events-none absolute right-5 top-5 font-mono text-[0.62rem] tracking-[0.08em] text-teal-bright/70"
                 style={{ transform: 'translateZ(38px)' }}
               >
                 {String(i + 1).padStart(2, '0')}

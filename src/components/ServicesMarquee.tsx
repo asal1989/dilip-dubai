@@ -19,7 +19,7 @@ export default function ServicesMarquee() {
               {items.map((title) => (
                 <li
                   key={title}
-                  className="flex items-center gap-6 whitespace-nowrap font-mono text-xs uppercase tracking-[0.18em] text-navy/70"
+                  className="flex items-center gap-6 whitespace-nowrap font-mono text-xs uppercase tracking-[0.06em] text-navy/70"
                 >
                   {title}
                   <span className="text-teal-bright" aria-hidden>

@@ -132,7 +132,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="group mt-6 inline-flex items-center gap-2 bg-teal px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-teal-bright"
+            className="group mt-6 inline-flex items-center gap-2 bg-teal px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.05em] text-white transition-colors hover:bg-teal-bright"
           >
             Submit Request
             <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />

@@ -14,10 +14,10 @@ export default function Logo({ tone = 'light' }: { tone?: 'light' | 'dark' }) {
         <path d="M17 2v9M9 26l8-15 8 15" stroke="var(--color-off)" strokeOpacity="0.0" strokeWidth="0" />
       </svg>
       <span className="leading-none">
-        <span className={`block font-mono text-[0.82rem] font-medium tracking-[0.18em] ${wordmark}`}>
+        <span className={`block font-mono text-[0.82rem] font-medium tracking-[0.06em] ${wordmark}`}>
           {company.shortName.toUpperCase()}
         </span>
-        <span className={`mt-1 block font-mono text-[0.55rem] tracking-[0.24em] ${sub}`}>
+        <span className={`mt-1 block font-mono text-[0.55rem] tracking-[0.08em] ${sub}`}>
           {company.legalLine.toUpperCase()}
         </span>
       </span>

@@ -29,7 +29,7 @@ export default function About() {
           </p>
           <a
             href="#contact"
-            className="group mt-9 inline-flex items-center gap-2 border border-off/30 px-5 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-off transition-colors hover:border-teal hover:text-teal"
+            className="group mt-9 inline-flex items-center gap-2 border border-off/30 px-5 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.06em] text-off transition-colors hover:border-teal hover:text-teal"
           >
             Learn More About Us
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />

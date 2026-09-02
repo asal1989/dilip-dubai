@@ -107,7 +107,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="whitespace-nowrap bg-teal px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-teal-bright"
+            className="whitespace-nowrap bg-teal px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.05em] text-white transition-colors hover:bg-teal-bright"
           >
             Get a Quote
           </a>
@@ -148,7 +148,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-4 block bg-teal px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.14em] text-white"
+            className="mt-4 block bg-teal px-5 py-3 text-center text-xs font-semibold uppercase tracking-[0.05em] text-white"
           >
             Get a Quote
           </a>

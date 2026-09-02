@@ -70,7 +70,7 @@ h3 {
 .label {
   font-family: var(--font-mono);
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.07em;
   font-size: 0.7rem;
   font-weight: 500;
 }

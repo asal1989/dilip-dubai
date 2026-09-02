@@ -31,7 +31,7 @@ export default function WhyUs() {
           <div className="mt-12 grid gap-x-10 gap-y-9 sm:grid-cols-2">
             {advantages.map((item) => (
               <div key={item.number}>
-                <span className="font-mono text-sm font-medium tracking-[0.2em] text-teal">
+                <span className="font-mono text-sm font-medium tracking-[0.07em] text-teal">
                   {item.number}
                 </span>
                 <h3 className="mt-2 font-sans text-base font-semibold text-navy">{item.title}</h3>
@@ -42,7 +42,7 @@ export default function WhyUs() {
 
           <a
             href="#about"
-            className="group mt-12 inline-flex items-center gap-2 border border-navy/20 px-5 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-navy transition-colors hover:border-teal hover:text-teal"
+            className="group mt-12 inline-flex items-center gap-2 border border-navy/20 px-5 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.06em] text-navy transition-colors hover:border-teal hover:text-teal"
           >
             Discover Our Approach
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />

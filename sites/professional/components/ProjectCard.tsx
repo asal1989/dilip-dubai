@@ -25,7 +25,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.location}
         </p>
         <div className="mt-4 flex items-center justify-between border-t border-navy/10 pt-3">
-          <span className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-teal">
+          <span className="font-mono text-[0.68rem] uppercase tracking-[0.06em] text-teal">
             {project.category}
           </span>
           <ArrowRight

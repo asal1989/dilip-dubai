@@ -33,14 +33,14 @@ export default function CTA() {
         <div className="flex flex-col gap-3">
           <a
             href="#contact"
-            className="group inline-flex items-center justify-center gap-2 bg-teal px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-teal-bright"
+            className="group inline-flex items-center justify-center gap-2 bg-teal px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.05em] text-white transition-colors hover:bg-teal-bright"
           >
             Get a Free Quote
             <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
             href={company.phoneHref}
-            className="inline-flex items-center justify-center gap-2 border border-off/30 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-off transition-colors hover:border-teal hover:text-teal"
+            className="inline-flex items-center justify-center gap-2 border border-off/30 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.05em] text-off transition-colors hover:border-teal hover:text-teal"
           >
             Call Us Now
           </a>

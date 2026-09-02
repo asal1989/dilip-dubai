@@ -10,7 +10,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       href="#contact"
       className="group flex h-full flex-col border border-navy/10 bg-white p-6 transition-colors duration-300 hover:border-teal"
     >
-      <span className="font-mono text-xs font-medium tracking-[0.2em] text-teal">
+      <span className="font-mono text-xs font-medium tracking-[0.07em] text-teal">
         {service.number}
       </span>
       <Icon
